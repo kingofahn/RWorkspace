@@ -130,22 +130,4 @@ for(i in(1:100)){
     )
 }
 
-# 국영수 합계, 평균, 학점 구하기
-name <- 'HJ';
-kor <- 100
-eng <- 55
-math <- 73
-res = c(kor,eng,math)
-cat("Name", "Total", "AVG","Grade","\n",
-    name,sum(res),mean(res),
-    grade = switch(toString(mean(res)%/%10),
-                                           '10' = 'A',
-                                           '9' = 'A',
-                                           '8' = 'B',
-                                           '7' = 'C',
-                                           '6' = 'D',
-                                           '5' = 'E',
-                                           'f'
-))
-
 help("=")

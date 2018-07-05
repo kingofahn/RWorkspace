@@ -18,3 +18,7 @@ print(is.factor(input_data))
 # Print the gender column so see the levels.
 print(input_data$gender)
 
+
+
+
+

@@ -103,11 +103,12 @@ midwest <- as.data.frame(ggplot2::midwest)
 # asian 으로 수정하세요
 midwest$total <- midwest$poptotal
 midwest$asian <- midwest$popasian
+
 # 2. total, asian 변수를 이용해 '전체 인구 대비 아시아 인구 
 # 백분율' 파생변수를만들고, 히스토그램을 만들어 도시들이
 # 어떻게 분포하는지 살펴보시오.
 midwest$asian_per_total <- (midwest$asian/midwest$total)*100
-hist(asian_per_total,xlab = "??",col = "yellow",border = "blue")
+hist(asian_per_total,col = "yellow",border = "blue")
 
 # 아시아 인구 백분율 전체 평균을 구하고, 
 total_asian_avg<-mean(asian_per_total)
@@ -123,4 +124,4 @@ summary(midwest)
  
 midwest <- subset(midwest,select = -asian) ## 삭제
 
-write.csv(midwest, file = "update_midwest.csv")
+write.csv(midwest, file = "update_midwest.csv") ## 파일추
